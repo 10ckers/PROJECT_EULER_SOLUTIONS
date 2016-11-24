@@ -25,15 +25,15 @@ pd=1
 l1=[]
 while True:
     ts=num[n:n+13]
-    if ts.__contains__('0'):
+    if ts.__contains__('0'): #if selected num has '0' then n=index(0)+1
         n+=ts.find('0')+1
     else:
         for i in ts:
-            pd*=int(i)
+            pd*=int(i)    #computes the product of 13 digit num
         n+=1
-        l1.append(pd)
+        l1.append(pd)   #appends the product to the list
         pd=1
     if n>990:
         break
-print(max(l1))
+print(max(l1))       #Prints the maximum product
 print(time.time()-t1)
